@@ -1,3 +1,6 @@
 [submodule "pelican-subtle-theme"]
 	path = pelican-subtle-theme
 	url = git://github.com/thulio/pelican-subtle-theme.git
+[submodule "output"]
+	path = output
+	url = git@github.com:coalkids/coalkids.github.com.git
