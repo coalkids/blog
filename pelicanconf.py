@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = u'Julien Seiler'
-SITENAME = u"coalkids' blog"
+SITENAME = u"coalkids"
 SITEURL = 'http://coalkids.github.com'
 
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = u'en'
+
+THEME = "pelican-subtle-theme"
 
 # Blogroll
 LINKS =  (('Bulleval', 'http://www.bulleval.fr'),)

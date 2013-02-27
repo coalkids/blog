@@ -1,0 +1,3 @@
+[submodule "pelican-subtle-theme"]
+	path = pelican-subtle-theme
+	url = git://github.com/thulio/pelican-subtle-theme.git
