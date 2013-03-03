@@ -1,9 +1,10 @@
 How to deploy your Cappuccino application ?
 ###########################################
 
-:date: 2013-02-27 10:14
-:tags: coalkids
-:slug: cappuccino
+:date: 2013-03-03 20:59
+:tags: jake, deploy, press, flatten, nginx, gzip
+:category: cappuccino
+:slug: cappuccino-deployment
 :author: Christophe Serafin
 :lang: en
 
@@ -60,6 +61,49 @@ Flatten inlines all your code into one or more Javascript Files. It comes with d
 For more information about flatten :
 https://github.com/cappuccino/cappuccino/wiki/flatten
 
+Hosting your application
+========================
 
+Basicaly, all you need to host a Cappuccino application is a simple static http server.
 
+However, Cappiccino applications are not very lightweight, so you might want to tune your http server settings in order to make your application loading faster.
 
+If you use flatten through your application deployment, you will end up with a bunch of Application.js files and a Ressources folder.
+
+Javascript files are simple text files that are good subject for gzip compression. You might reduce your Application.js files up to 65% just by applying a simple gzip compression.
+
+If you use nginx to serve your application, use the following settings to activate gzip compression : ::
+
+    gzip on;
+    gzip_types application/x-javascript text/javascript application/octet-stream;
+    gzip_http_version 1.0;
+
+The ``gzip_types`` directive let you enable gzip compression for other mime-type than text/html (which is enabled by default). For your Cappuccino application you will need ``application/x-javascript`` and ``text/javascript``  mime-types support for you ``.js`` file. We add the ``application/octet-stream`` mime-type for ``.sj`` files.
+
+We use the ``gzip_http_version`` directive because we are hosting most of our application on dotcloud which is transporting trafic between their routers and our Nginx servers in HTTP/1.0 (see http://answers.dotcloud.com/question/212/gzip-compression).
+
+You can find documentation to enable gzip compression on an Apache server on the Cappuccino wiki : https://github.com/cappuccino/cappuccino/wiki/Optimizations
+
+.. gzip + press + flatten
+   Apparition spinner : 12,2s
+   Total : 17,89s
+   onload : 13,24s
+   DOMContentLoaded : 9,77s
+   838KB transferred
+   2457,6KB
+   diff : 1619,6KB
+
+.. gzip + press :
+   Apparition spinner : 7,5s
+   Total : 30,85s
+   onload : 7,83s
+   DOMContentLoaded: 4,17s
+   944KB transferred
+
+.. 2483974  1 mar 18:06 Application.js
+   349036  1 mar 18:05 Application.js.gz
+   326991  1 mar 18:05 Application.js.gz.zopfli
+
+.. 2483974 100
+   349036	14%
+   326991	13,16%
