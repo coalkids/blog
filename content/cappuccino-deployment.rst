@@ -31,7 +31,7 @@ or ::
 Here we will focus on the ``jake deploy`` command line.
 
 Press
-=====
+-----
 
 Press's goal is to remove unnecessary code by only retaining files which are
 actually used in your application. It tries to follow your imports to determine
@@ -54,7 +54,7 @@ should import your files directly in the AppController.j : ::
 
 
 Flatten
-=======
+-------
 
 Flatten inlines all your code into one or more Javascript Files. It comes with different compresssors and can optionnaly split files into 2 to 6 files to optimize the browser download.
 
