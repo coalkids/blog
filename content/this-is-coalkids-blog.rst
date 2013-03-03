@@ -4,7 +4,7 @@ This is the coalkids blog
 :date: 2013-02-27 10:14
 :tags: coalkids
 :slug: this-is-coalkids-blog
-:author: Julien Seiler
+:author: The Coalkids
 :lang: en
 
 Hi all,
