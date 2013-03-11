@@ -41,5 +41,5 @@ To be able to run nose tests on the dotcloud, we basically use the ``--exe`` opt
 
     OK
 
-.. _Bullval: http://www.bulleval.fr
 .. _nose: https://nose.readthedocs.org
+.. _Bulleval: http://www.bulleval.fr
