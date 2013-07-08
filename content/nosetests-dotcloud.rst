@@ -10,7 +10,7 @@ Running nosetests on a dotcloud python instance
 
 A few month ago, we have chosen to rely on dotcloud to host our whole Bulleval_ stack. This includes a Python service hosting our web API.
 
-I reccently faced the need to run unit and functionnal tests for our Python service in order to check for any integration issue within the dotcloud infrastructure. So I basically, open a ssh connection to a sandbox instance of our Python service. ::
+I recently faced the need to run unit and functionnal tests for our Python service in order to check for any integration issue within the dotcloud infrastructure. So I basically, open a ssh connection to a sandbox instance of our Python service. ::
 
     localhost$ dotcloud run python_instance_name.0
     dotcloud$
