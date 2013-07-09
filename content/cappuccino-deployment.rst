@@ -7,6 +7,7 @@ How to deploy your Cappuccino application ?
 :slug: cappuccino-deployment
 :author: Christophe Serafin
 :lang: en
+:status: draft
 
 Cappuccino is an open source framework that helps developers to build web
 applications. It is based on the Objective-J (J stands for Javascript) language which is the equivalent of Objective-C in Cocoa framework.

@@ -7,6 +7,7 @@ Running nosetests on a dotcloud python instance
 :slug: nosetests-dotcloud
 :author: Julien Seiler
 :lang: en
+:status: draft
 
 A few month ago, we have chosen to rely on dotcloud to host our whole Bulleval_ stack. This includes a Python service hosting our web API.
 
