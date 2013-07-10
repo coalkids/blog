@@ -24,14 +24,16 @@ For many years the only solution was to use proxy requests. Fortunately, the COR
 
 In order to ask if the server domain will allow the request, modern browsers send what we call a preflighted request to the server - using HTTP Verb OPTIONS - before sending the actual request.
 
-HTTP Response will have to contain specific headers to allow the actual request::
+HTTP Response will have to contain specific headers to allow the actual request:
+
+.. code-block:: js
 
     Access-Control-Allow-Origin : http://your-client-side-domain/
     Access-Control-Allow-Methods : GET, POST, PUT, DELETE
 
 
 How we deal with crossdomain request on our Flask server ?
-========================================================
+==========================================================
 
 Context
 -------
@@ -91,6 +93,7 @@ Here is what we came up with :
 
 
         return resp
+
 
 You want to improve this solution / Have a better idea ?
 ========================================================
