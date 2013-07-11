@@ -3,7 +3,7 @@
 
 AUTHOR = u'Julien Seiler'
 SITENAME = u"Coalkids Blog"
-SITEURL = 'http://coalkids.github.io'
+SITEURL = 'http://coalkids.github.com'
 
 TIMEZONE = 'Europe/Paris'
 
@@ -20,3 +20,4 @@ SOCIAL = (('github', 'http://github.com/coalkids'),)
 #RELATIVE_URLS = True
 DEFAULT_PAGINATION = 10
 GOOGLE_ANALYTICS = 'UA-42374473-1'
+GOOGLE_ANALYTICS_SITE = 'coalkids.github.io'
