@@ -17,6 +17,6 @@ LINKS =  (('Bulleval', 'http://www.bulleval.fr'),)
 # Social widget
 SOCIAL = (('github', 'http://github.com/coalkids'),)
 
+#RELATIVE_URLS = True
 DEFAULT_PAGINATION = 10
-
 GOOGLE_ANALYTICS = 'UA-42374473-1'
