@@ -3,7 +3,7 @@
 
 AUTHOR = u'Julien Seiler'
 SITENAME = u"Coalkids Blog"
-SITEURL = 'http://coalkids.github.com'
+SITEURL = 'http://coalkids.github.io'
 
 TIMEZONE = 'Europe/Paris'
 
