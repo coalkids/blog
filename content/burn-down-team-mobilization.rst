@@ -1,7 +1,7 @@
 Burn down and real team's mobilization
 ######################################
 
-:date: 2011-06-14 19:45
+:date: 2013-07-23 19:45
 :tags: scrum, burn down, retrospective
 :category: agility
 :slug: burn-down-team-mobilization
