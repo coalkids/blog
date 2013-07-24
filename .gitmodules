@@ -1,6 +1,3 @@
-[submodule "output"]
-	path = output
-	url = git@github.com:coalkids/coalkids.github.com.git
 [submodule "pelican-subtle-theme"]
 	path = pelican-subtle-theme
 	url = git@github.com:coalkids/pelican-subtle-theme.git
