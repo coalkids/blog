@@ -1,3 +1,6 @@
+# pelican output dir
+output
+
 *.py[cod]
 
 # C extensions

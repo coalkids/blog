@@ -18,6 +18,8 @@ SSH_TARGET_DIR=/var/www
 
 DROPBOX_DIR=~/Dropbox/Public/
 
+GIT_HUB_REPOSITORY=git@github.com:coalkids/coalkids.github.com.git
+
 help:
 	@echo 'Makefile for a pelican Web site                                        '
 	@echo '                                                                       '
@@ -40,21 +42,25 @@ html: clean $(OUTPUTDIR)/index.html
 	@echo 'Done'
 
 $(OUTPUTDIR)/%.html:
+	mkdir -p $(OUTPUTDIR)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
+	mkdir -p $(OUTPUTDIR)
 	find $(OUTPUTDIR) -mindepth 1 -delete
 
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
+	mkdir -p $(OUTPUTDIR)
 	cd $(OUTPUTDIR) && python -m SimpleHTTPServer
 
 devserver:
 	$(BASEDIR)/develop_server.sh restart
 
 publish:
+	mkdir -p $(OUTPUTDIR)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
@@ -70,7 +76,6 @@ ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 github: publish
-	ghp-import $(OUTPUTDIR)
-	git push origin gh-pages
+	ghp-update $(OUTPUTDIR) $(GIT_HUB_REPOSITORY)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
